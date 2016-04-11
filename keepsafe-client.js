@@ -27,7 +27,7 @@ function addDevice($user, $password, $server) {
     keypair=nacl.sign.keyPair();
     localStorage.keepsafekeypair=keypair;
     post(
-        $server+'/index.php',
+        $server+'/addDevice',
         {user: $user,
          password: $password,
          keypair: keypair.publicKey,
